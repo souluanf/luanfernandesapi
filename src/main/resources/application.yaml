@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /money-flow-api
+    encoding:
+      force: true
+  shutdown: graceful
+spring:
+  application:
+    name: money-flow-api
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+  web:
+    resources:
+      add-mappings: false
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    default-property-inclusion: non_null
+
+springdoc:
+  swagger-ui:
+    enabled: ${money-flow-api.springdoc.swagger-ui.enabled}
+    operations-sorter: method
+    tags-sorter: alpha
+    display-request-duration: true
+
+openapi-servers-urls: ${money-flow-api.openapi-servers-urls}
