@@ -38,13 +38,15 @@ public class Loader implements CommandLineRunner {
         while (linha != null) {
 
             campos = linha.split(";");
-            UserRegisterRequest userRegisterRequest = UserRegisterRequest.builder()
-                    .name(campos[0])
-                    .email(campos[1])
-                    .role(UserRole.valueOf(campos[2]))
-                    .build();
+            if (campos.length >= 3) {
+                UserRegisterRequest userRegisterRequest = UserRegisterRequest.builder()
+                        .name(campos[0])
+                        .email(campos[1])
+                        .role(UserRole.valueOf(campos[2]))
+                        .build();
 
-            userService.createUser(userRegisterRequest);
+                userService.createUser(userRegisterRequest);
+            }
             linha = usersBuffer.readLine();
         }
 
@@ -60,16 +62,18 @@ public class Loader implements CommandLineRunner {
 
         while (linha != null) {
             campos = linha.split(";");
-            Integer userId = Integer.parseInt(campos[5]);
-            TransactionRequest transactionRequest = TransactionRequest.builder()
-                    .type(TransactionType.valueOf(campos[0]))
-                    .category(campos[1])
-                    .amount(new BigDecimal(campos[2]))
-                    .transactionDate(LocalDate.parse(campos[3]))
-                    .description(campos[4])
-                    .build();
+            if (campos.length >= 6) {
+                Integer userId = Integer.parseInt(campos[5]);
+                TransactionRequest transactionRequest = TransactionRequest.builder()
+                        .type(TransactionType.valueOf(campos[0]))
+                        .category(campos[1])
+                        .amount(new BigDecimal(campos[2]))
+                        .transactionDate(LocalDate.parse(campos[3]))
+                        .description(campos[4])
+                        .build();
 
-            transactionService.createTransaction(transactionRequest, userId);
+                transactionService.createTransaction(transactionRequest, userId);
+            }
             linha = transactionsBuffer.readLine();
         }
 
