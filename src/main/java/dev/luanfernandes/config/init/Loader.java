@@ -74,7 +74,7 @@ public class Loader implements CommandLineRunner {
         }
 
         log.info(
-                "Total de transações carregadas: {}",
+                "Total de transações gravadas: {}",
                 transactionService.listTransactions(1).size()
                         + transactionService.listTransactions(2).size()
                         + transactionService.listTransactions(3).size()
