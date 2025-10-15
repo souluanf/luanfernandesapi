@@ -2,17 +2,17 @@
 
 Sistema de gerenciamento financeiro pessoal, controle de despesas e receitas.
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=souluanf_personal-finance-tracker&metric=alert_status&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_personal-finance-tracker)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=souluanf_personal-finance-tracker&metric=coverage&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_personal-finance-tracker)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=souluanf_personal-finance-tracker&metric=code_smells&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_personal-finance-tracker)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=souluanf_personal-finance-tracker&metric=ncloc&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_personal-finance-tracker)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=souluanf_personal-finance-tracker&metric=sqale_index&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_personal-finance-tracker)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=souluanf_personal-finance-tracker&metric=reliability_rating&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_personal-finance-tracker)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=souluanf_personal-finance-tracker&metric=duplicated_lines_density&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_personal-finance-tracker)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=souluanf_personal-finance-tracker&metric=vulnerabilities&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_personal-finance-tracker)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=souluanf_personal-finance-tracker&metric=bugs&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_personal-finance-tracker)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=souluanf_personal-finance-tracker&metric=security_rating&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_personal-finance-tracker)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=souluanf_personal-finance-tracker&metric=sqale_rating&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_personal-finance-tracker)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=souluanf_luanfernandesapi&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=souluanf_luanfernandesapi)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=souluanf_luanfernandesapi&metric=coverage)](https://sonarcloud.io/summary/new_code?id=souluanf_luanfernandesapi)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=souluanf_luanfernandesapi&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=souluanf_luanfernandesapi)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=souluanf_luanfernandesapi&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=souluanf_luanfernandesapi)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=souluanf_luanfernandesapi&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=souluanf_luanfernandesapi)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=souluanf_luanfernandesapi&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=souluanf_luanfernandesapi)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=souluanf_luanfernandesapi&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=souluanf_luanfernandesapi)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=souluanf_luanfernandesapi&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=souluanf_luanfernandesapi)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=souluanf_luanfernandesapi&metric=bugs)](https://sonarcloud.io/summary/new_code?id=souluanf_luanfernandesapi)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=souluanf_luanfernandesapi&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=souluanf_luanfernandesapi)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=souluanf_luanfernandesapi&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=souluanf_luanfernandesapi)
 
 ## Sumário
 
