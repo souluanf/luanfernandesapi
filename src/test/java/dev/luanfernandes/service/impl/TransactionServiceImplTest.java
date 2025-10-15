@@ -211,6 +211,24 @@ class TransactionServiceImplTest {
     }
 
     @Test
+    @DisplayName("Should throw TransactionNotFoundException when updating non-existent transaction")
+    void shouldThrowException_WhenUpdatingNonExistentTransaction() {
+        var userId = 1;
+        var transactionId = 999;
+        var request = createTransactionRequest();
+        var user = createTestUser();
+
+        when(userRepository.findById(userId)).thenReturn(Optional.of(user));
+        when(transactionRepository.findById(transactionId)).thenReturn(Optional.empty());
+
+        assertThatThrownBy(() -> transactionService.updateTransaction(transactionId, request, userId))
+                .isInstanceOf(TransactionNotFoundException.class);
+
+        verify(userRepository).findById(userId);
+        verify(transactionRepository).findById(transactionId);
+    }
+
+    @Test
     @DisplayName("Should throw TransactionAccessDeniedException when updating transaction of another user")
     void shouldThrowException_WhenUpdatingTransactionOfAnotherUser() {
         var userId = 1;
@@ -269,6 +287,23 @@ class TransactionServiceImplTest {
         verify(userRepository).findById(userId);
         verify(transactionRepository).findById(transactionId);
         verify(transactionRepository).deleteById(transactionId);
+    }
+
+    @Test
+    @DisplayName("Should throw TransactionNotFoundException when deleting non-existent transaction")
+    void shouldThrowException_WhenDeletingNonExistentTransaction() {
+        var userId = 1;
+        var transactionId = 999;
+        var user = createTestUser();
+
+        when(userRepository.findById(userId)).thenReturn(Optional.of(user));
+        when(transactionRepository.findById(transactionId)).thenReturn(Optional.empty());
+
+        assertThatThrownBy(() -> transactionService.deleteTransaction(transactionId, userId))
+                .isInstanceOf(TransactionNotFoundException.class);
+
+        verify(userRepository).findById(userId);
+        verify(transactionRepository).findById(transactionId);
     }
 
     @Test

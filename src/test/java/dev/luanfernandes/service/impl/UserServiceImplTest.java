@@ -142,6 +142,19 @@ class UserServiceImplTest {
     }
 
     @Test
+    @DisplayName("Should throw UserNotFoundException when updating non-existent user")
+    void shouldThrowException_WhenUpdatingNonExistentUser() {
+        var userId = 999;
+        var request = new UserUpdateRequest("New Name", "new@example.com", USER);
+
+        when(userRepository.findById(userId)).thenReturn(Optional.empty());
+
+        assertThatThrownBy(() -> userService.updateUser(userId, request)).isInstanceOf(UserNotFoundException.class);
+
+        verify(userRepository).findById(userId);
+    }
+
+    @Test
     @DisplayName("Should throw UserAlreadyExistsException when updating to existing email")
     void shouldThrowException_WhenUpdatingToExistingEmail() {
         var userId = 1;
