@@ -1,0 +1,5 @@
+money-flow-api:
+  springdoc:
+    swagger-ui:
+      enabled: false
+  openapi-servers-urls: http://localhost:${server.port}${server.servlet.context-path}, http://127.0.0.1:${server.port}${server.servlet.context-path}

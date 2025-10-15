@@ -1,0 +1,55 @@
+INCOME;Salário;5500.00;2025-01-05;Salário mensal de janeiro;1
+EXPENSE;Alimentação;450.80;2025-01-10;Compras do supermercado;1
+EXPENSE;Transporte;280.00;2025-01-12;Combustível e manutenção;1
+EXPENSE;Moradia;1200.00;2025-01-15;Aluguel mensal;1
+INCOME;Freelance;1200.00;2025-01-20;Projeto de desenvolvimento web;1
+EXPENSE;Saúde;150.00;2025-01-22;Consulta médica;1
+EXPENSE;Lazer;320.50;2025-01-25;Cinema e restaurante;1
+EXPENSE;Educação;500.00;2025-01-28;Curso online;1
+INCOME;Salário;5500.00;2025-02-05;Salário mensal de fevereiro;1
+EXPENSE;Alimentação;520.30;2025-02-08;Compras do supermercado;1
+EXPENSE;Transporte;300.00;2025-02-11;Combustível;1
+EXPENSE;Moradia;1200.00;2025-02-15;Aluguel mensal;1
+INCOME;Investimentos;250.00;2025-02-18;Rendimento de investimentos;1
+EXPENSE;Vestuário;420.00;2025-02-20;Roupas novas;1
+EXPENSE;Lazer;180.00;2025-02-23;Passeio no parque;1
+INCOME;Salário;3200.00;2025-01-05;Salário mensal;2
+EXPENSE;Alimentação;380.00;2025-01-08;Supermercado;2
+EXPENSE;Moradia;900.00;2025-01-15;Aluguel;2
+EXPENSE;Transporte;200.00;2025-01-18;Combustível;2
+INCOME;Bônus;800.00;2025-01-25;Bônus por desempenho;2
+EXPENSE;Lazer;250.00;2025-01-28;Jantar em restaurante;2
+INCOME;Salário;3200.00;2025-02-05;Salário mensal;2
+EXPENSE;Alimentação;400.00;2025-02-10;Supermercado;2
+EXPENSE;Moradia;900.00;2025-02-15;Aluguel;2
+INCOME;Salário;4800.00;2025-01-05;Salário mensal de janeiro;3
+EXPENSE;Moradia;1500.00;2025-01-10;Aluguel e condomínio;3
+EXPENSE;Alimentação;600.00;2025-01-12;Compras do mês;3
+EXPENSE;Transporte;150.00;2025-01-15;Uber e transporte público;3
+INCOME;Consultoria;2000.00;2025-01-20;Consultoria em design;3
+EXPENSE;Educação;800.00;2025-01-22;Especialização em UX;3
+EXPENSE;Saúde;300.00;2025-01-25;Plano de saúde;3
+EXPENSE;Lazer;280.00;2025-01-28;Academia e atividades;3
+INCOME;Salário;4800.00;2025-02-05;Salário mensal de fevereiro;3
+EXPENSE;Moradia;1500.00;2025-02-10;Aluguel e condomínio;3
+EXPENSE;Alimentação;650.00;2025-02-13;Compras do mês;3
+EXPENSE;Vestuário;350.00;2025-02-18;Roupas de trabalho;3
+EXPENSE;Saúde;300.00;2025-02-22;Plano de saúde;3
+EXPENSE;Tecnologia;1200.00;2025-02-25;Notebook novo;3
+INCOME;Salário;6200.00;2025-01-05;Salário mensal;4
+EXPENSE;Moradia;1800.00;2025-01-08;Financiamento imóvel;4
+EXPENSE;Alimentação;800.00;2025-01-10;Supermercado e feira;4
+EXPENSE;Transporte;450.00;2025-01-12;Prestação do carro;4
+EXPENSE;Educação;1200.00;2025-01-15;Escola dos filhos;4
+INCOME;Investimentos;380.00;2025-01-18;Dividendos de ações;4
+EXPENSE;Saúde;450.00;2025-01-20;Convênio médico familiar;4
+EXPENSE;Lazer;500.00;2025-01-25;Viagem de final de semana;4
+EXPENSE;Serviços;200.00;2025-01-28;Internet e streaming;4
+INCOME;Salário;6200.00;2025-02-05;Salário mensal;4
+EXPENSE;Moradia;1800.00;2025-02-08;Financiamento imóvel;4
+EXPENSE;Alimentação;850.00;2025-02-11;Supermercado e feira;4
+EXPENSE;Transporte;450.00;2025-02-13;Prestação do carro;4
+EXPENSE;Educação;1200.00;2025-02-15;Escola dos filhos;4
+EXPENSE;Saúde;450.00;2025-02-18;Convênio médico familiar;4
+EXPENSE;Lazer;320.00;2025-02-22;Passeio com a família;4
+INCOME;Bônus;1500.00;2025-02-28;Bônus trimestral;4

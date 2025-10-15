@@ -1,0 +1,1626 @@
+{
+	"info": {
+		"_postman_id": "d0600fcf-c880-45c3-8d45-7254e6f4cf75",
+		"name": "Money Flow API",
+		"description": "API para gerenciamento financeiro pessoal\n\nContact Support:  \nName: Luan Fernandes  \nEmail: [contact@luanfernandes.dev](https://mailto:contact@luanfernandes.dev)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26187327",
+		"_collection_link": "https://www.postman.com/dark-eclipse-840412/workspace/public/collection/26187327-d0600fcf-c880-45c3-8d45-7254e6f4cf75?action=share&source=collection_link&creator=26187327"
+	},
+	"item": [
+		{
+			"name": "api/v1",
+			"item": [
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Buscar usuário por ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "5718",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Busca usuário específico por ID."
+									},
+									"response": [
+										{
+											"name": "Usuário encontrado",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5718",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": 1,\n  \"name\": \"João Silva\",\n  \"email\": \"joao.silva@example.com\",\n  \"role\": \"USER\",\n  \"createdAt\": \"1952-04-04T04:53:47.775Z\",\n  \"updatedAt\": \"2010-06-25T07:29:21.321Z\"\n}"
+										},
+										{
+											"name": "Usuário não encontrado",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5718",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": 1,\n  \"name\": \"João Silva\",\n  \"email\": \"joao.silva@example.com\",\n  \"role\": \"USER\",\n  \"createdAt\": \"1952-04-04T04:53:47.775Z\",\n  \"updatedAt\": \"2010-06-25T07:29:21.321Z\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Atualizar usuário",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"João Silva\",\n  \"email\": \"user@example.com\",\n  \"role\": \"ADMIN\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "5718",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Atualiza dados do usuário"
+									},
+									"response": [
+										{
+											"name": "Usuário atualizado com sucesso",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"João Silva\",\n  \"email\": \"user@example.com\",\n  \"role\": \"ADMIN\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5718",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Dados de entrada inválidos",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"João Silva\",\n  \"email\": \"user@example.com\",\n  \"role\": \"ADMIN\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5718",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Usuário não encontrado",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"João Silva\",\n  \"email\": \"user@example.com\",\n  \"role\": \"ADMIN\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5718",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Deletar usuário",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "5718",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Deleta usuário."
+									},
+									"response": [
+										{
+											"name": "Usuário deletado com sucesso",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5718",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Usuário não encontrado",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5718",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Não é possível deletar usuário com transações associadas",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5718",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Conflict",
+											"code": 409,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Listar usuários",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								},
+								"description": "Lista todos os usuários do sistema"
+							},
+							"response": [
+								{
+									"name": "Lista de usuários retornada com sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": 1,\n    \"name\": \"João Silva\",\n    \"email\": \"joao.silva@example.com\",\n    \"role\": \"USER\",\n    \"createdAt\": \"1952-09-25T05:40:25.955Z\",\n    \"updatedAt\": \"1955-03-01T23:27:55.665Z\"\n  },\n  {\n    \"id\": 1,\n    \"name\": \"João Silva\",\n    \"email\": \"joao.silva@example.com\",\n    \"role\": \"USER\",\n    \"createdAt\": \"1990-07-25T17:41:02.037Z\",\n    \"updatedAt\": \"1951-02-07T05:19:00.746Z\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "Criar usuário",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"newuser@example.com\",\n  \"name\": \"João Silva\",\n  \"role\": \"USER\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								},
+								"description": "Cria novo usuário"
+							},
+							"response": [
+								{
+									"name": "Usuário criado com sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"newuser@example.com\",\n  \"name\": \"João Silva\",\n  \"role\": \"USER\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"users"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 1,\n  \"name\": \"João Silva\",\n  \"email\": \"joao.silva@example.com\",\n  \"role\": \"USER\",\n  \"createdAt\": \"1952-04-04T04:53:47.775Z\",\n  \"updatedAt\": \"2010-06-25T07:29:21.321Z\"\n}"
+								},
+								{
+									"name": "Dados de entrada inválidos ou usuário já existe",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"newuser@example.com\",\n  \"name\": \"João Silva\",\n  \"role\": \"USER\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"users"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 1,\n  \"name\": \"João Silva\",\n  \"email\": \"joao.silva@example.com\",\n  \"role\": \"USER\",\n  \"createdAt\": \"1952-04-04T04:53:47.775Z\",\n  \"updatedAt\": \"2010-06-25T07:29:21.321Z\"\n}"
+								},
+								{
+									"name": "Usuário já existe com este email",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"newuser@example.com\",\n  \"name\": \"João Silva\",\n  \"role\": \"USER\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"users"
+											]
+										}
+									},
+									"status": "Conflict",
+									"code": 409,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 1,\n  \"name\": \"João Silva\",\n  \"email\": \"joao.silva@example.com\",\n  \"role\": \"USER\",\n  \"createdAt\": \"1952-04-04T04:53:47.775Z\",\n  \"updatedAt\": \"2010-06-25T07:29:21.321Z\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "transactions",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Buscar transação por ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "userId",
+												"value": "5718",
+												"description": "(Required) "
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/transactions/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"transactions",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "5718",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Retorna os detalhes de uma transação específica"
+									},
+									"response": [
+										{
+											"name": "Transação encontrada com sucesso",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "userId",
+														"value": "5718",
+														"description": "(Required) "
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/transactions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"transactions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5718",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": 7816,\n  \"type\": \"INCOME\",\n  \"category\": \"string\",\n  \"amount\": 8137.330672575576,\n  \"transactionDate\": \"1973-02-10\",\n  \"description\": \"string\",\n  \"userId\": \"string\",\n  \"createdAt\": \"1964-03-13T18:44:22.354Z\",\n  \"updatedAt\": \"1959-11-26T03:54:40.433Z\"\n}"
+										},
+										{
+											"name": "Transação ou usuário não encontrado",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "userId",
+														"value": "5718",
+														"description": "(Required) "
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/transactions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"transactions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5718",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": 7816,\n  \"type\": \"INCOME\",\n  \"category\": \"string\",\n  \"amount\": 8137.330672575576,\n  \"transactionDate\": \"1973-02-10\",\n  \"description\": \"string\",\n  \"userId\": \"string\",\n  \"createdAt\": \"1964-03-13T18:44:22.354Z\",\n  \"updatedAt\": \"1959-11-26T03:54:40.433Z\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Atualizar transação",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "userId",
+												"value": "5718",
+												"description": "(Required) "
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"amount\": 1500,\n  \"category\": \"Salário\",\n  \"transactionDate\": \"2025-10-15\",\n  \"type\": \"INCOME\",\n  \"description\": \"Salário mensal\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/transactions/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"transactions",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "5718",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Atualiza os dados de uma transação existente"
+									},
+									"response": [
+										{
+											"name": "Transação atualizada com sucesso",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "userId",
+														"value": "5718",
+														"description": "(Required) "
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"amount\": 1500,\n  \"category\": \"Salário\",\n  \"transactionDate\": \"2025-10-15\",\n  \"type\": \"INCOME\",\n  \"description\": \"Salário mensal\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/transactions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"transactions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5718",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": 7816,\n  \"type\": \"INCOME\",\n  \"category\": \"string\",\n  \"amount\": 8137.330672575576,\n  \"transactionDate\": \"1973-02-10\",\n  \"description\": \"string\",\n  \"userId\": \"string\",\n  \"createdAt\": \"1964-03-13T18:44:22.354Z\",\n  \"updatedAt\": \"1959-11-26T03:54:40.433Z\"\n}"
+										},
+										{
+											"name": "Dados de entrada inválidos",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "userId",
+														"value": "5718",
+														"description": "(Required) "
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"amount\": 1500,\n  \"category\": \"Salário\",\n  \"transactionDate\": \"2025-10-15\",\n  \"type\": \"INCOME\",\n  \"description\": \"Salário mensal\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/transactions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"transactions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5718",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": 7816,\n  \"type\": \"INCOME\",\n  \"category\": \"string\",\n  \"amount\": 8137.330672575576,\n  \"transactionDate\": \"1973-02-10\",\n  \"description\": \"string\",\n  \"userId\": \"string\",\n  \"createdAt\": \"1964-03-13T18:44:22.354Z\",\n  \"updatedAt\": \"1959-11-26T03:54:40.433Z\"\n}"
+										},
+										{
+											"name": "Transação ou usuário não encontrado",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "userId",
+														"value": "5718",
+														"description": "(Required) "
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"amount\": 1500,\n  \"category\": \"Salário\",\n  \"transactionDate\": \"2025-10-15\",\n  \"type\": \"INCOME\",\n  \"description\": \"Salário mensal\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/transactions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"transactions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5718",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": 7816,\n  \"type\": \"INCOME\",\n  \"category\": \"string\",\n  \"amount\": 8137.330672575576,\n  \"transactionDate\": \"1973-02-10\",\n  \"description\": \"string\",\n  \"userId\": \"string\",\n  \"createdAt\": \"1964-03-13T18:44:22.354Z\",\n  \"updatedAt\": \"1959-11-26T03:54:40.433Z\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Deletar transação",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "userId",
+												"value": "5718",
+												"description": "(Required) "
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/transactions/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"transactions",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "5718",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Remove uma transação do sistema"
+									},
+									"response": [
+										{
+											"name": "Transação deletada com sucesso",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "userId",
+														"value": "5718",
+														"description": "(Required) "
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/transactions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"transactions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5718",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Transação ou usuário não encontrado",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "userId",
+														"value": "5718",
+														"description": "(Required) "
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/transactions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"transactions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5718",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Listar transações do usuário",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "userId",
+										"value": "5718",
+										"description": "(Required) "
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/transactions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"transactions"
+									]
+								},
+								"description": "Retorna todas as transações (receitas e despesas) do usuário"
+							},
+							"response": [
+								{
+									"name": "Lista de transações retornada com sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "userId",
+												"value": "5718",
+												"description": "(Required) "
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/transactions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"transactions"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": 4781,\n    \"type\": \"EXPENSE\",\n    \"category\": \"string\",\n    \"amount\": 3688.0501152786983,\n    \"transactionDate\": \"1950-08-05\",\n    \"description\": \"string\",\n    \"userId\": \"string\",\n    \"createdAt\": \"1954-08-01T12:06:37.171Z\",\n    \"updatedAt\": \"2004-12-01T11:49:47.936Z\"\n  },\n  {\n    \"id\": 5614,\n    \"type\": \"INCOME\",\n    \"category\": \"string\",\n    \"amount\": 7671.053394271991,\n    \"transactionDate\": \"2014-05-20\",\n    \"description\": \"string\",\n    \"userId\": \"string\",\n    \"createdAt\": \"1983-12-13T05:56:41.535Z\",\n    \"updatedAt\": \"2011-09-10T10:31:32.582Z\"\n  }\n]"
+								},
+								{
+									"name": "Usuário não encontrado",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "userId",
+												"value": "5718",
+												"description": "(Required) "
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/transactions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"transactions"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": 4781,\n    \"type\": \"EXPENSE\",\n    \"category\": \"string\",\n    \"amount\": 3688.0501152786983,\n    \"transactionDate\": \"1950-08-05\",\n    \"description\": \"string\",\n    \"userId\": \"string\",\n    \"createdAt\": \"1954-08-01T12:06:37.171Z\",\n    \"updatedAt\": \"2004-12-01T11:49:47.936Z\"\n  },\n  {\n    \"id\": 5614,\n    \"type\": \"INCOME\",\n    \"category\": \"string\",\n    \"amount\": 7671.053394271991,\n    \"transactionDate\": \"2014-05-20\",\n    \"description\": \"string\",\n    \"userId\": \"string\",\n    \"createdAt\": \"1983-12-13T05:56:41.535Z\",\n    \"updatedAt\": \"2011-09-10T10:31:32.582Z\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "Criar nova transação",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "userId",
+										"value": "5718",
+										"description": "(Required) "
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"amount\": 1500,\n  \"category\": \"Salário\",\n  \"transactionDate\": \"2025-10-15\",\n  \"type\": \"INCOME\",\n  \"description\": \"Salário mensal\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/transactions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"transactions"
+									]
+								},
+								"description": "Cria uma nova transação (receita ou despesa) para o usuário"
+							},
+							"response": [
+								{
+									"name": "Transação criada com sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "userId",
+												"value": "5718",
+												"description": "(Required) "
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"amount\": 1500,\n  \"category\": \"Salário\",\n  \"transactionDate\": \"2025-10-15\",\n  \"type\": \"INCOME\",\n  \"description\": \"Salário mensal\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/transactions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"transactions"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 7816,\n  \"type\": \"INCOME\",\n  \"category\": \"string\",\n  \"amount\": 8137.330672575576,\n  \"transactionDate\": \"1973-02-10\",\n  \"description\": \"string\",\n  \"userId\": \"string\",\n  \"createdAt\": \"1964-03-13T18:44:22.354Z\",\n  \"updatedAt\": \"1959-11-26T03:54:40.433Z\"\n}"
+								},
+								{
+									"name": "Dados de entrada inválidos",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "userId",
+												"value": "5718",
+												"description": "(Required) "
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"amount\": 1500,\n  \"category\": \"Salário\",\n  \"transactionDate\": \"2025-10-15\",\n  \"type\": \"INCOME\",\n  \"description\": \"Salário mensal\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/transactions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"transactions"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 7816,\n  \"type\": \"INCOME\",\n  \"category\": \"string\",\n  \"amount\": 8137.330672575576,\n  \"transactionDate\": \"1973-02-10\",\n  \"description\": \"string\",\n  \"userId\": \"string\",\n  \"createdAt\": \"1964-03-13T18:44:22.354Z\",\n  \"updatedAt\": \"1959-11-26T03:54:40.433Z\"\n}"
+								},
+								{
+									"name": "Usuário não encontrado",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "userId",
+												"value": "5718",
+												"description": "(Required) "
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"amount\": 1500,\n  \"category\": \"Salário\",\n  \"transactionDate\": \"2025-10-15\",\n  \"type\": \"INCOME\",\n  \"description\": \"Salário mensal\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/transactions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"transactions"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 7816,\n  \"type\": \"INCOME\",\n  \"category\": \"string\",\n  \"amount\": 8137.330672575576,\n  \"transactionDate\": \"1973-02-10\",\n  \"description\": \"string\",\n  \"userId\": \"string\",\n  \"createdAt\": \"1964-03-13T18:44:22.354Z\",\n  \"updatedAt\": \"1959-11-26T03:54:40.433Z\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Calcular saldo mensal",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "userId",
+										"value": "5718",
+										"description": "(Required) "
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/transactions/balance?year=5718&month=5718",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"transactions",
+										"balance"
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "5718",
+											"description": "(Required) "
+										},
+										{
+											"key": "month",
+											"value": "5718",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Calcula o saldo mensal do usuário (total de receitas - total de despesas)"
+							},
+							"response": [
+								{
+									"name": "Saldo mensal calculado com sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "userId",
+												"value": "5718",
+												"description": "(Required) "
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/transactions/balance?year=5718&month=5718",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"transactions",
+												"balance"
+											],
+											"query": [
+												{
+													"key": "year",
+													"value": "5718"
+												},
+												{
+													"key": "month",
+													"value": "5718"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"year\": 5974,\n  \"month\": 5532,\n  \"totalIncome\": 6890.538962669843,\n  \"totalExpense\": 1717.844312611705,\n  \"balance\": 4188.21620856018\n}"
+								},
+								{
+									"name": "Usuário não encontrado",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "userId",
+												"value": "5718",
+												"description": "(Required) "
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/transactions/balance?year=5718&month=5718",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"transactions",
+												"balance"
+											],
+											"query": [
+												{
+													"key": "year",
+													"value": "5718"
+												},
+												{
+													"key": "month",
+													"value": "5718"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"year\": 5974,\n  \"month\": 5532,\n  \"totalIncome\": 6890.538962669843,\n  \"totalExpense\": 1717.844312611705,\n  \"balance\": 4188.21620856018\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080/money-flow-api",
+			"type": "string"
+		}
+	]
+}
